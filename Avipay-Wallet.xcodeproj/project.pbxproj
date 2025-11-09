@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43DADADA2EC0C0A7007A7E70 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */; };
+		43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DADADC2EC0C272007A7E70 /* Fonts.swift */; };
+		43DADAE12EC0C49B007A7E70 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43DADAE02EC0C49B007A7E70 /* DMSans-Regular.ttf */; };
+		43DADAE22EC0C49B007A7E70 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43DADADF2EC0C49B007A7E70 /* DMSans-Medium.ttf */; };
 		7918F9242EBA7E9500B7EEDE /* Avipay_WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */; };
 		7918F9262EBA7E9500B7EEDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F9252EBA7E9500B7EEDE /* ContentView.swift */; };
 		7918F9282EBA7E9700B7EEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F9272EBA7E9700B7EEDE /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		43DADADC2EC0C272007A7E70 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		43DADADF2EC0C49B007A7E70 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		43DADAE02EC0C49B007A7E70 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		7918F9202EBA7E9500B7EEDE /* Avipay-Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avipay-Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avipay_WalletApp.swift; sourceTree = "<group>"; };
 		7918F9252EBA7E9500B7EEDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +40,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43DADAD62EC0C080007A7E70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43DADADE2EC0C425007A7E70 /* Fonts */,
+				7918F9272EBA7E9700B7EEDE /* Assets.xcassets */,
+				43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		43DADADB2EC0C266007A7E70 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				43DADADC2EC0C272007A7E70 /* Fonts.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		43DADADE2EC0C425007A7E70 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				43DADADF2EC0C49B007A7E70 /* DMSans-Medium.ttf */,
+				43DADAE02EC0C49B007A7E70 /* DMSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7918F9172EBA7E9500B7EEDE = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +86,10 @@
 		7918F9222EBA7E9500B7EEDE /* Avipay-Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				43DADADB2EC0C266007A7E70 /* DesignSystem */,
+				43DADAD62EC0C080007A7E70 /* Resources */,
 				7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */,
 				7918F9252EBA7E9500B7EEDE /* ContentView.swift */,
-				7918F9272EBA7E9700B7EEDE /* Assets.xcassets */,
 				7918F9292EBA7E9700B7EEDE /* Preview Content */,
 			);
 			path = "Avipay-Wallet";
@@ -125,6 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DADAE12EC0C49B007A7E70 /* DMSans-Regular.ttf in Resources */,
+				43DADAE22EC0C49B007A7E70 /* DMSans-Medium.ttf in Resources */,
+				43DADADA2EC0C0A7007A7E70 /* Colors.xcassets in Resources */,
 				7918F92B2EBA7E9700B7EEDE /* Preview Assets.xcassets in Resources */,
 				7918F9282EBA7E9700B7EEDE /* Assets.xcassets in Resources */,
 			);
@@ -138,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7918F9262EBA7E9500B7EEDE /* ContentView.swift in Sources */,
+				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
 				7918F9242EBA7E9500B7EEDE /* Avipay_WalletApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
