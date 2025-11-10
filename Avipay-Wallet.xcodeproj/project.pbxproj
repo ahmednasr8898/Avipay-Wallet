@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246BB2EC2251400444C9B /* DoneButton.swift */; };
+		431246C02EC2268300444C9B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246BF2EC2268300444C9B /* OnboardingView.swift */; };
 		432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F48F62EC0E3F7006BBF6E /* NormalButton.swift */; };
 		43DADADA2EC0C0A7007A7E70 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */; };
 		43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DADADC2EC0C272007A7E70 /* Fonts.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		431246BB2EC2251400444C9B /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		431246BF2EC2268300444C9B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		432F48F62EC0E3F7006BBF6E /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		43DADADC2EC0C272007A7E70 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -50,6 +52,22 @@
 				431246BB2EC2251400444C9B /* DoneButton.swift */,
 			);
 			path = DoneButton;
+			sourceTree = "<group>";
+		};
+		431246BD2EC2264600444C9B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				431246BE2EC2265E00444C9B /* Onboarding */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		431246BE2EC2265E00444C9B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				431246BF2EC2268300444C9B /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		432F48F42EC0E3A5006BBF6E /* Buttons */ = {
@@ -116,8 +134,9 @@
 		7918F9222EBA7E9500B7EEDE /* Avipay-Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				43DADADB2EC0C266007A7E70 /* DesignSystem */,
 				43DADAD62EC0C080007A7E70 /* Resources */,
+				43DADADB2EC0C266007A7E70 /* DesignSystem */,
+				431246BD2EC2264600444C9B /* Scenes */,
 				7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */,
 				7918F9252EBA7E9500B7EEDE /* ContentView.swift */,
 				7918F9292EBA7E9700B7EEDE /* Preview Content */,
@@ -209,6 +228,7 @@
 				431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */,
 				7918F9262EBA7E9500B7EEDE /* ContentView.swift in Sources */,
 				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
+				431246C02EC2268300444C9B /* OnboardingView.swift in Sources */,
 				432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */,
 				7918F9242EBA7E9500B7EEDE /* Avipay_WalletApp.swift in Sources */,
 			);

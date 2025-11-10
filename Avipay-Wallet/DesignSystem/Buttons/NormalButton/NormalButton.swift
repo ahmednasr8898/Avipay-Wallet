@@ -11,7 +11,6 @@ import SwiftUI
 struct NormalButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding(12)
             .font(.button)
             .background(Color.primaryAvipay)
             .foregroundColor(Color.white)

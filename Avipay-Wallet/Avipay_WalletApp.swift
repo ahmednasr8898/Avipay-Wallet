@@ -11,7 +11,7 @@ import SwiftUI
 struct Avipay_WalletApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
