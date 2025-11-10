@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246BB2EC2251400444C9B /* DoneButton.swift */; };
 		431246C02EC2268300444C9B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246BF2EC2268300444C9B /* OnboardingView.swift */; };
+		431246C32EC234DC00444C9B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246C22EC234DC00444C9B /* LoginView.swift */; };
 		432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F48F62EC0E3F7006BBF6E /* NormalButton.swift */; };
 		43DADADA2EC0C0A7007A7E70 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */; };
 		43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DADADC2EC0C272007A7E70 /* Fonts.swift */; };
 		43DADAE12EC0C49B007A7E70 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43DADAE02EC0C49B007A7E70 /* DMSans-Regular.ttf */; };
 		43DADAE22EC0C49B007A7E70 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43DADADF2EC0C49B007A7E70 /* DMSans-Medium.ttf */; };
 		7918F9242EBA7E9500B7EEDE /* Avipay_WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */; };
-		7918F9262EBA7E9500B7EEDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F9252EBA7E9500B7EEDE /* ContentView.swift */; };
 		7918F9282EBA7E9700B7EEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F9272EBA7E9700B7EEDE /* Assets.xcassets */; };
 		7918F92B2EBA7E9700B7EEDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F92A2EBA7E9700B7EEDE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		431246BB2EC2251400444C9B /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		431246BF2EC2268300444C9B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		431246C22EC234DC00444C9B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		432F48F62EC0E3F7006BBF6E /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		43DADAD92EC0C0A7007A7E70 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		43DADADC2EC0C272007A7E70 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		43DADAE02EC0C49B007A7E70 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		7918F9202EBA7E9500B7EEDE /* Avipay-Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avipay-Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avipay_WalletApp.swift; sourceTree = "<group>"; };
-		7918F9252EBA7E9500B7EEDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7918F9272EBA7E9700B7EEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7918F92A2EBA7E9700B7EEDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				431246BE2EC2265E00444C9B /* Onboarding */,
+				431246C12EC234CE00444C9B /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -68,6 +69,14 @@
 				431246BF2EC2268300444C9B /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		431246C12EC234CE00444C9B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				431246C22EC234DC00444C9B /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		432F48F42EC0E3A5006BBF6E /* Buttons */ = {
@@ -138,7 +147,6 @@
 				43DADADB2EC0C266007A7E70 /* DesignSystem */,
 				431246BD2EC2264600444C9B /* Scenes */,
 				7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */,
-				7918F9252EBA7E9500B7EEDE /* ContentView.swift */,
 				7918F9292EBA7E9700B7EEDE /* Preview Content */,
 			);
 			path = "Avipay-Wallet";
@@ -225,8 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431246C32EC234DC00444C9B /* LoginView.swift in Sources */,
 				431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */,
-				7918F9262EBA7E9500B7EEDE /* ContentView.swift in Sources */,
 				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
 				431246C02EC2268300444C9B /* OnboardingView.swift in Sources */,
 				432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */,
