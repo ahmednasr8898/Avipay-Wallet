@@ -12,6 +12,11 @@
 		431246C32EC234DC00444C9B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246C22EC234DC00444C9B /* LoginView.swift */; };
 		432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F48F62EC0E3F7006BBF6E /* NormalButton.swift */; };
 		435524552EFD56A900310333 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524542EFD56A900310333 /* LoginViewModel.swift */; };
+		435524592EFD6D8A00310333 /* AvipayErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524582EFD6D7E00310333 /* AvipayErrorAlert.swift */; };
+		4355245C2EFD71E400310333 /* GenericErrorOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355245B2EFD71E300310333 /* GenericErrorOverlay.swift */; };
+		435524602EFD88AA00310333 /* StateViewEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355245F2EFD88A200310333 /* StateViewEnum.swift */; };
+		435524622EFD88C300310333 /* StateContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524612EFD88C100310333 /* StateContainer.swift */; };
+		435524652EFD89A100310333 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524642EFD899E00310333 /* AppError.swift */; };
 		43C1CF552ECA160000A1A768 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF542ECA160000A1A768 /* HeaderView.swift */; };
 		43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */; };
 		43C1CF5B2ECA23FE00A1A768 /* InputFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */; };
@@ -31,6 +36,11 @@
 		431246C22EC234DC00444C9B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		432F48F62EC0E3F7006BBF6E /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		435524542EFD56A900310333 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		435524582EFD6D7E00310333 /* AvipayErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvipayErrorAlert.swift; sourceTree = "<group>"; };
+		4355245B2EFD71E300310333 /* GenericErrorOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorOverlay.swift; sourceTree = "<group>"; };
+		4355245F2EFD88A200310333 /* StateViewEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewEnum.swift; sourceTree = "<group>"; };
+		435524612EFD88C100310333 /* StateContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateContainer.swift; sourceTree = "<group>"; };
+		435524642EFD899E00310333 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		43C1CF542ECA160000A1A768 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvipayTextFieldView.swift; sourceTree = "<group>"; };
 		43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldType.swift; sourceTree = "<group>"; };
@@ -107,10 +117,46 @@
 			path = NormalButton;
 			sourceTree = "<group>";
 		};
+		4355245A2EFD71D400310333 /* AvipayErrorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				4355245B2EFD71E300310333 /* GenericErrorOverlay.swift */,
+				435524582EFD6D7E00310333 /* AvipayErrorAlert.swift */,
+			);
+			path = AvipayErrorAlert;
+			sourceTree = "<group>";
+		};
+		4355245D2EFD888700310333 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				435524632EFD899300310333 /* AppError */,
+				4355245E2EFD888F00310333 /* StateView */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4355245E2EFD888F00310333 /* StateView */ = {
+			isa = PBXGroup;
+			children = (
+				4355245F2EFD88A200310333 /* StateViewEnum.swift */,
+				435524612EFD88C100310333 /* StateContainer.swift */,
+			);
+			path = StateView;
+			sourceTree = "<group>";
+		};
+		435524632EFD899300310333 /* AppError */ = {
+			isa = PBXGroup;
+			children = (
+				435524642EFD899E00310333 /* AppError.swift */,
+			);
+			path = AppError;
+			sourceTree = "<group>";
+		};
 		43C1CF532ECA15DD00A1A768 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
 				43C1CF542ECA160000A1A768 /* HeaderView.swift */,
+				4355245A2EFD71D400310333 /* AvipayErrorAlert */,
 				43C1CF592ECA23E900A1A768 /* AvipayTextField */,
 			);
 			path = ReusableViews;
@@ -176,6 +222,7 @@
 				43DADAD62EC0C080007A7E70 /* Resources */,
 				43DADADB2EC0C266007A7E70 /* DesignSystem */,
 				43C1CF532ECA15DD00A1A768 /* ReusableViews */,
+				4355245D2EFD888700310333 /* Helpers */,
 				431246BD2EC2264600444C9B /* Scenes */,
 				7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */,
 				7918F9292EBA7E9700B7EEDE /* Preview Content */,
@@ -268,11 +315,16 @@
 				431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */,
 				435524552EFD56A900310333 /* LoginViewModel.swift in Sources */,
 				43C1CF5D2ECA245D00A1A768 /* AvipayTextFieldValidator.swift in Sources */,
+				435524652EFD89A100310333 /* AppError.swift in Sources */,
+				4355245C2EFD71E400310333 /* GenericErrorOverlay.swift in Sources */,
+				435524602EFD88AA00310333 /* StateViewEnum.swift in Sources */,
 				43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */,
 				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
 				431246C02EC2268300444C9B /* OnboardingView.swift in Sources */,
 				432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */,
 				43C1CF5B2ECA23FE00A1A768 /* InputFieldType.swift in Sources */,
+				435524622EFD88C300310333 /* StateContainer.swift in Sources */,
+				435524592EFD6D8A00310333 /* AvipayErrorAlert.swift in Sources */,
 				7918F9242EBA7E9500B7EEDE /* Avipay_WalletApp.swift in Sources */,
 				43C1CF552ECA160000A1A768 /* HeaderView.swift in Sources */,
 			);
