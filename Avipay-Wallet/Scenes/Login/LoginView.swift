@@ -9,9 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var phone: String = ""
-    @State private var password: String = ""
-    @State private var isSavePasswordSelected = false
+    @StateObject private var viewModel = LoginViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -20,18 +18,17 @@ struct LoginView: View {
             }
             
             VStack(spacing: 28) {
-                
-                AvipayTextFieldView(title: "Phone", type: .phone, text: $phone)
-                AvipayTextFieldView(title: "Password", type: .password, text: $password)
+                AvipayTextFieldView(title: "Phone", type: .phone, text: $viewModel.phone)
+                AvipayTextFieldView(title: "Password", type: .password, text: $viewModel.password)
             }
             .padding([.horizontal, .top], 24)
             
             HStack {
                 HStack(spacing: 4) {
                     Button {
-                        isSavePasswordSelected.toggle()
+                        viewModel.isSavePasswordSelected.toggle()
                     } label: {
-                        Image(systemName: isSavePasswordSelected ? "checkmark.square.fill" : "app")
+                        Image(systemName: viewModel.isSavePasswordSelected ? "checkmark.square.fill" : "app")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16, height: 16)
@@ -60,9 +57,10 @@ struct LoginView: View {
             .padding(.top, 10)
             .padding(.horizontal, 24)
             
+            configureStateView()
             
             Button(action: {
-                // Tapped on login
+                viewModel.login()
             }, label: {
                 Text(" Login")
                     .frame(maxWidth: .infinity)
@@ -88,6 +86,21 @@ struct LoginView: View {
             }
             .padding(.top, 16)
             Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    private func configureStateView() -> some View {
+        switch viewModel.getLoginState() {
+        case .idle:
+            EmptyView()
+        case .loading:
+            ProgressView()
+                .padding(.top, 16)
+        case .failure(let error):
+            Text("Erorr \(error.description)")
+        case .success(let model):
+            Text("success \(model.token)")
         }
     }
 }

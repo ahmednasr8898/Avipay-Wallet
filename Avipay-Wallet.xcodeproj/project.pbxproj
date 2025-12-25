@@ -11,6 +11,7 @@
 		431246C02EC2268300444C9B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246BF2EC2268300444C9B /* OnboardingView.swift */; };
 		431246C32EC234DC00444C9B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431246C22EC234DC00444C9B /* LoginView.swift */; };
 		432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F48F62EC0E3F7006BBF6E /* NormalButton.swift */; };
+		435524552EFD56A900310333 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524542EFD56A900310333 /* LoginViewModel.swift */; };
 		43C1CF552ECA160000A1A768 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF542ECA160000A1A768 /* HeaderView.swift */; };
 		43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */; };
 		43C1CF5B2ECA23FE00A1A768 /* InputFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */; };
@@ -29,6 +30,7 @@
 		431246BF2EC2268300444C9B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		431246C22EC234DC00444C9B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		432F48F62EC0E3F7006BBF6E /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
+		435524542EFD56A900310333 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		43C1CF542ECA160000A1A768 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvipayTextFieldView.swift; sourceTree = "<group>"; };
 		43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldType.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				431246C22EC234DC00444C9B /* LoginView.swift */,
+				435524542EFD56A900310333 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				431246C32EC234DC00444C9B /* LoginView.swift in Sources */,
 				431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */,
+				435524552EFD56A900310333 /* LoginViewModel.swift in Sources */,
 				43C1CF5D2ECA245D00A1A768 /* AvipayTextFieldValidator.swift in Sources */,
 				43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */,
 				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
