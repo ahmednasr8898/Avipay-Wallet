@@ -7,60 +7,37 @@
 
 import Foundation
 
-/// A service responsible for making network requests.
-final class NetworkService {
+/// A protocol defining the structure of an API request.
+protocol APIClientProtocol {
+    /// Sends an API request and returns the response.
+    /// - Parameter request: The API request to be sent.
+    /// - Returns: The response of the API request.
+    func send<R: APIRequest>(_ request: R) async throws -> R.Response
+}
 
-    static let shared = NetworkService()
-    private init() {}
+/// A class responsible for sending API requests.
+final class APIClient: APIClientProtocol {
 
-    /// Makes a network request to the specified endpoint and decodes the response.
-    /// - Parameters:
-    ///  - endpoint: The endpoint to which the request is made.
-    ///  - responseType: The type of the expected response.
-    ///  - Returns: The decoded response of the specified type.
-    func request<T: Decodable>(
-        endpoint: Endpoint,
-        responseType: T.Type
-    ) async throws -> T {
+    /// Sends an API request and returns the response.
+    func send<R: APIRequest>(_ request: R) async throws -> R.Response {
 
-        /// A wrapper to encode any Encodable type.
-        guard let url = URL(string: endpoint.baseURL + endpoint.path) else {
-            throw NetworkError.invalidURL
-        }
+        /// Perform the network request
+        let (data, response) = try await URLSession.shared.data(
+            for: request.urlRequest
+        )
 
-        /// Construct the URLRequest.
-        var request = URLRequest(url: url)
-        request.httpMethod = endpoint.method.rawValue
-        request.allHTTPHeaderFields = endpoint.headers
-
-        /// Encode the request body if present.
-        if let body = endpoint.body {
-            /// Use AnyEncodable to encode the body.
-            request.httpBody = try JSONEncoder().encode(AnyEncodable(body))
-            /// Set the Content-Type header.
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        }
-
-        /// Perform the network request.
-        let (data, response) = try await URLSession.shared.data(for: request)
-
-        /// Validate the response.
+        /// Validate the response
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
+            throw URLError(.badServerResponse)
         }
 
-        /// Check for successful status codes.
+        /// Check for successful status code
         guard (200...299).contains(httpResponse.statusCode) else {
-            throw NetworkError.serverError(statusCode: httpResponse.statusCode)
+            throw URLError(.badServerResponse)
         }
 
-        /// Decode the response data.
-        do {
-            /// Decode the data into the expected type.
-            return try JSONDecoder().decode(T.self, from: data)
-        } catch {
-            /// Handle decoding errors.
-            throw NetworkError.decodingError
-        }
+        /// Decode and return the response
+        return try JSONDecoder().decode(R.Response.self, from: data)
     }
 }
+

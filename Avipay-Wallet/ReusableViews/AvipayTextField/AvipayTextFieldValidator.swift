@@ -19,7 +19,7 @@ struct AvipayTextFieldValidator {
                          confirmPassword: Binding<String>? = nil) -> Bool {
         switch type {
         case .phone:
-            return text.count == 11
+            return text.count >= 6
 
         case .username:
             return text.count >= 3

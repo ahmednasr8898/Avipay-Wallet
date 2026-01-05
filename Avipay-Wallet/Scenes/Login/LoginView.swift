@@ -52,13 +52,15 @@ struct LoginView: View {
                     .padding(.top, 10)
                     .padding(.horizontal, 24)
                     
-                    Button(action: { viewModel.login() }) {
+                    Button(action: {  Task { await viewModel.login() } }) {
                         Text("Login")
                             .frame(maxWidth: .infinity)
                             .frame(height: 50)
+                            .foregroundColor(viewModel.isButtonEnabled ? .white : .gray)
                     }
                     .buttonStyle(.normal)
                     .padding(.top, 40)
+                    .disabled(!viewModel.isButtonEnabled)
                     .padding(.horizontal, 24)
                     
                     if let model = data {

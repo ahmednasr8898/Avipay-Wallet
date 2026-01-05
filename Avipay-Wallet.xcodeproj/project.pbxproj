@@ -17,11 +17,11 @@
 		435524602EFD88AA00310333 /* StateViewEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355245F2EFD88A200310333 /* StateViewEnum.swift */; };
 		435524622EFD88C300310333 /* StateContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524612EFD88C100310333 /* StateContainer.swift */; };
 		435524652EFD89A100310333 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435524642EFD899E00310333 /* AppError.swift */; };
-		43A768FE2F0BC5260091F98B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A768FD2F0BC5260091F98B /* HTTPMethod.swift */; };
-		43A769002F0BC5820091F98B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A768FF2F0BC5820091F98B /* Endpoint.swift */; };
 		43A769022F0BC5AA0091F98B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A769012F0BC5AA0091F98B /* NetworkService.swift */; };
-		43A769042F0BC5C90091F98B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A769032F0BC5C90091F98B /* NetworkError.swift */; };
-		43A769062F0BC5F50091F98B /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A769052F0BC5F50091F98B /* AnyEncodable.swift */; };
+		43A7690B2F0BC8A30091F98B /* LoginAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7690A2F0BC8A30091F98B /* LoginAPIRequest.swift */; };
+		43A7690D2F0BC8EF0091F98B /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7690C2F0BC8D40091F98B /* AuthRepository.swift */; };
+		43A769112F0BCB0E0091F98B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A769102F0BCB0E0091F98B /* Login.swift */; };
+		43A7691C2F0BCE080091F98B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7691B2F0BCE080091F98B /* APIRequest.swift */; };
 		43C1CF552ECA160000A1A768 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF542ECA160000A1A768 /* HeaderView.swift */; };
 		43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */; };
 		43C1CF5B2ECA23FE00A1A768 /* InputFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */; };
@@ -46,11 +46,11 @@
 		4355245F2EFD88A200310333 /* StateViewEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewEnum.swift; sourceTree = "<group>"; };
 		435524612EFD88C100310333 /* StateContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateContainer.swift; sourceTree = "<group>"; };
 		435524642EFD899E00310333 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		43A768FD2F0BC5260091F98B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		43A768FF2F0BC5820091F98B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		43A769012F0BC5AA0091F98B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		43A769032F0BC5C90091F98B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		43A769052F0BC5F50091F98B /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		43A7690A2F0BC8A30091F98B /* LoginAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIRequest.swift; sourceTree = "<group>"; };
+		43A7690C2F0BC8D40091F98B /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		43A769102F0BCB0E0091F98B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		43A7691B2F0BCE080091F98B /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		43C1CF542ECA160000A1A768 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		43C1CF562ECA1A2700A1A768 /* AvipayTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvipayTextFieldView.swift; sourceTree = "<group>"; };
 		43C1CF5A2ECA23FC00A1A768 /* InputFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldType.swift; sourceTree = "<group>"; };
@@ -165,13 +165,44 @@
 		43A768FC2F0BC50D0091F98B /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
-				43A768FD2F0BC5260091F98B /* HTTPMethod.swift */,
-				43A769032F0BC5C90091F98B /* NetworkError.swift */,
-				43A768FF2F0BC5820091F98B /* Endpoint.swift */,
+				43A7691B2F0BCE080091F98B /* APIRequest.swift */,
 				43A769012F0BC5AA0091F98B /* NetworkService.swift */,
-				43A769052F0BC5F50091F98B /* AnyEncodable.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		43A769082F0BC8080091F98B /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				43A7690E2F0BCAFE0091F98B /* Models */,
+				43A769092F0BC81E0091F98B /* AuthRequests */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		43A769092F0BC81E0091F98B /* AuthRequests */ = {
+			isa = PBXGroup;
+			children = (
+				43A7690A2F0BC8A30091F98B /* LoginAPIRequest.swift */,
+				43A7690C2F0BC8D40091F98B /* AuthRepository.swift */,
+			);
+			path = AuthRequests;
+			sourceTree = "<group>";
+		};
+		43A7690E2F0BCAFE0091F98B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43A7690F2F0BCB060091F98B /* Auth */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43A7690F2F0BCB060091F98B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				43A769102F0BCB0E0091F98B /* Login.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		43C1CF532ECA15DD00A1A768 /* ReusableViews */ = {
@@ -245,6 +276,7 @@
 				43DADADB2EC0C266007A7E70 /* DesignSystem */,
 				43C1CF532ECA15DD00A1A768 /* ReusableViews */,
 				43A768FC2F0BC50D0091F98B /* NetworkServices */,
+				43A769082F0BC8080091F98B /* DataLayer */,
 				4355245D2EFD888700310333 /* Helpers */,
 				431246BD2EC2264600444C9B /* Scenes */,
 				7918F9232EBA7E9500B7EEDE /* Avipay_WalletApp.swift */,
@@ -335,7 +367,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				431246C32EC234DC00444C9B /* LoginView.swift in Sources */,
+				43A7691C2F0BCE080091F98B /* APIRequest.swift in Sources */,
 				431246BC2EC2251C00444C9B /* DoneButton.swift in Sources */,
+				43A7690B2F0BC8A30091F98B /* LoginAPIRequest.swift in Sources */,
 				435524552EFD56A900310333 /* LoginViewModel.swift in Sources */,
 				43C1CF5D2ECA245D00A1A768 /* AvipayTextFieldValidator.swift in Sources */,
 				435524652EFD89A100310333 /* AppError.swift in Sources */,
@@ -343,13 +377,11 @@
 				435524602EFD88AA00310333 /* StateViewEnum.swift in Sources */,
 				43C1CF572ECA1A2700A1A768 /* AvipayTextFieldView.swift in Sources */,
 				43DADADD2EC0C276007A7E70 /* Fonts.swift in Sources */,
-				43A769042F0BC5C90091F98B /* NetworkError.swift in Sources */,
-				43A769062F0BC5F50091F98B /* AnyEncodable.swift in Sources */,
+				43A7690D2F0BC8EF0091F98B /* AuthRepository.swift in Sources */,
 				431246C02EC2268300444C9B /* OnboardingView.swift in Sources */,
-				43A769002F0BC5820091F98B /* Endpoint.swift in Sources */,
+				43A769112F0BCB0E0091F98B /* Login.swift in Sources */,
 				432F48F72EC0E3FC006BBF6E /* NormalButton.swift in Sources */,
 				43C1CF5B2ECA23FE00A1A768 /* InputFieldType.swift in Sources */,
-				43A768FE2F0BC5260091F98B /* HTTPMethod.swift in Sources */,
 				435524622EFD88C300310333 /* StateContainer.swift in Sources */,
 				43A769022F0BC5AA0091F98B /* NetworkService.swift in Sources */,
 				435524592EFD6D8A00310333 /* AvipayErrorAlert.swift in Sources */,
