@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject private var viewModel = LoginViewModel()
+    @State private var navigateToDashboard = false
     
     var body: some View {
          /// A container that manages different states of the login process
@@ -62,12 +63,19 @@ struct LoginView: View {
                     .padding(.top, 40)
                     .disabled(!viewModel.isButtonEnabled)
                     .padding(.horizontal, 24)
-                    
-                    if let model = data {
-                        // Here you can navigate to the next screen or show success message
-                        Text("Success! Token: \(model)")
-                            .foregroundColor(.green)
+                    .navigationDestination(isPresented: $navigateToDashboard) {
+                        DashboardView()
+                            .toolbar(.hidden, for: .navigationBar)
                     }
+                    
+                    if let _ = data {
+                        Text("")
+                            .foregroundColor(.green)
+                            .onAppear {
+                                navigateToDashboard = true
+                            }
+                    }
+                    
                     
                     HStack(spacing: 4) {
                         Text("Don’t have account?")
